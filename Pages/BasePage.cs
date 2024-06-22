@@ -3,8 +3,6 @@ using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.PageObjects;
 using SeleniumExtras.WaitHelpers;
-using System.Configuration;
-using System.Data;
 
 namespace SplitIt.Pages
 {

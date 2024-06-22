@@ -1,10 +1,5 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SplitIt.Tests
 {
@@ -21,7 +16,7 @@ namespace SplitIt.Tests
         public void setup()
         {
             ChromeOptions options = new ChromeOptions();
-            options.AddArguments("--disable-blink-features=AutomationControlled", "--disable-extensions", 
+            options.AddArguments("--disable-blink-features=AutomationControlled", "--disable-extensions",
                 "--incognito", "--window-size=1920,1080");
             options.AddAdditionalOption("useAutomationExtension", false);
             options.AddExcludedArguments("excludeSwitches", "enable-automation");

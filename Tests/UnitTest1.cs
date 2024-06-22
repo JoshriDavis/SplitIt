@@ -1,12 +1,6 @@
 using FluentAssertions;
-using Newtonsoft.Json;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Support.UI;
 using RestSharp;
 using SplitIt.Pages;
-using SplitIt.Tests;
 
 namespace SplitIt.Tests
 {
@@ -25,7 +19,7 @@ namespace SplitIt.Tests
             // Login
             LoginPage loginPage = new LoginPage(driver);
             loginPage.login("qa@splitit.com", "A1qazxsw23434!");
-            
+
             // Extract access_token
             var endpoint = "https://reqres.in/api/users";
             var client = new RestClient(endpoint);
@@ -37,4 +31,4 @@ namespace SplitIt.Tests
             response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
         }
     }
-} 
+}
